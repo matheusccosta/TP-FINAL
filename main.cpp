@@ -17,7 +17,7 @@ int main() {
     // vetor.push_back(2);
     // vetor.push_back(0);
 
-    Personagem *saci = new Saci(100, 30, 6, "gustavo", vantSaci, 1);
+    Personagem *saci = new Saci(100, 30, 6, "gustavoo", vantSaci, 1);
     Personagem *mula = new Mula(100, 28, 8, "henrique", vantMula, 2);
     Personagem *iara = new Iara(100, 24, 12, "matheus", vantIara, 3);
     Personagem *curupira = new Curupira(100, 26, 10, "raony", vantCurupira, 4);
