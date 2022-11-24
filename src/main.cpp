@@ -99,9 +99,9 @@ int main() {
     std::cout << std::endl;
     
     if (p1->getVida()<0){
-        std::cout<<"Vencedor eh o/a " << p2->getNome()<<".";
+        std::cout<<"Vencedor eh o/a " << p2->getNome()<<"."<<std::endl;
     } else{
-        std::cout<<"Vencedor eh o/a " << p1->getNome()<<".";
+        std::cout<<"Vencedor eh o/a " << p1->getNome()<<"."<<std::endl;
     }
     // iara->imprimePersonagem();
     // std::cout << std::endl;
