@@ -60,11 +60,14 @@ void Mula::Ataque(Personagem *p, float sorte){
     //Calcula o golpe baseado no ataque e na vantagem do respectivo adversário;
     float golpe = this->ataque * sorte; //+ p.vantagem;
     
-    std::cout << "sorte: " << sorte << std::endl;
+    int dano = golpe - p->getDefesa();
+    std::cout << "Dano: " <<dano <<std::endl;
+    
 
-    if( golpe - (p->getDefesa()) > 0){
-    int NovaVida = p->getVida() - (golpe - (p->getDefesa()));
+    if( dano > 0){
+    int NovaVida = p->getVida() - dano;
     p->setVida(NovaVida);
+    std::cout<<"Vida do adversario: " << (int)NovaVida<<std::endl<<std::endl;
     }
 }
 
