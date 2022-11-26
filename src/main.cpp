@@ -3,46 +3,8 @@
 #include "mula.hpp"
 #include "iara.hpp"
 #include "curupira.hpp"
+#include "jogo.hpp"
 
-void definePersonagem(Personagem **p, int tipo, std::string nome){
-
-    std::string nomeP;
-    std::vector<int> vantSaci = {3, 0};
-    std::vector<int> vantMula = {4, 0};  // Fogo ganha da planta
-    std::vector<int> vantIara = {2, 0};  // Agua ganha do fogo
-    std::vector<int> vantCurupira = {1, 3};  // Planta ganha da terra e da agua
-    
-    switch (tipo){
-
-        case 1: 
-        nomeP = "Saci de " + nome;
-        //std::cout<<nomeP;
-        *p = new Saci (100, 30, 15, nomeP, vantSaci, 1);
-        break;
-
-        case 2:
-        nomeP = "Mula de " + nome;
-        //std::cout<<nomeP;
-        *p = new Mula (100, 30, 15, nomeP, vantMula, 2);
-        break;
-
-        case 3:
-        nomeP = "Iara de " + nome;
-        //std::cout<<nomeP;
-        *p = new Iara (100, 30, 15, nomeP, vantIara, 3);
-        break;
-
-        case 4:
-        nomeP = "Curupira de " + nome;
-        //std::cout<<nomeP;
-        *p = new Curupira (100, 30, 15, nomeP, vantCurupira, 4);
-        break;
-        //int pontos_vida, int ataque, int defesa, std::string nome, std::vector <int> vantagem, int tipo
-
-    }
-
-
-}
 
 int main() {
 
@@ -53,24 +15,20 @@ int main() {
     int tipo;
     Personagem *p1;
     Personagem *p2;
+    Jogo j;
 
+    JogarNovamente:
     std::cout<<"Insira seu nome aqui, Jogador 1: ";
     std::cin >> nome1; 
-    std::cout<<std::endl;
-    std::cout<<"Selecione com qual personagem voce quer jogar!"<<std::endl<<std::endl;
-    std::cout<<"1 - Saci"<<std::endl<<"2 - Mula"<<std::endl<<"3 - Iara"<<std::endl<<"4- Curupira"<<std::endl;
-    std::cout<<std::endl<<"Qual voce escolhe? Insira: ";
+    j.imprimeMenu();
     std::cin>>tipo;
-    definePersonagem(&p1, tipo, nome1);
+    j.definePersonagem(&p1, tipo, nome1);
     std::cout<<std::endl<<"Insira seu nome aqui, Jogador 2: ";
     std::cin >> nome2;
-    std::cout<<std::endl; 
-    std::cout<<"Selecione com qual personagem voce quer jogar!"<<std::endl<<std::endl;
-    std::cout<<"1 - Saci"<<std::endl<<"2 - Mula"<<std::endl<<"3 - Iara"<<std::endl<<"4- Curupira"<<std::endl;
-    std::cout<<std::endl<<"Qual voce escolhe? Insira: ";
+    j.imprimeMenu();
     std::cin>>tipo;
     std::cin.ignore();
-    definePersonagem(&p2, tipo, nome2);
+    j.definePersonagem(&p2, tipo, nome2);
     std::cout<<std::endl;
     p1->imprimePersonagem();
     std::cout<<std::endl;
@@ -102,6 +60,18 @@ int main() {
         std::cout<<"Vencedor eh o/a " << p2->getNome()<<"."<<std::endl;
     } else{
         std::cout<<"Vencedor eh o/a " << p1->getNome()<<"."<<std::endl;
+    }
+
+    std::cout << std::endl << "Deseja jogar Novamente? (S/N)";
+
+    //Pergunta ao Jogador se ele quer iniciar o jogo novamente
+    int partida = 1;
+    std::string proxgame;
+    std::cin >> proxgame;
+    if(proxgame == "S"){
+        partida++;
+        std::cout << std::endl << "Novo Jogo: Partida " << partida << std::endl << std::endl;
+        goto JogarNovamente;
     }
     // iara->imprimePersonagem();
     // std::cout << std::endl;

@@ -18,7 +18,10 @@ mula:
 saci:
 	$(CC) $(FLAGS) -c $(SRC)/saci.cpp -o $(BUILD)/saci.o
 
-main: curupira iara mula saci
+jogo: curupira iara mula saci
+	$(CC) $(FLAGS) -c $(SRC)/jogo.cpp -o $(BUILD)/jogo.o
+
+main: curupira iara mula saci jogo
 	$(CC) $(FLAGS) $(BUILD)/*.o $(SRC)/main.cpp -o $(TARGET)
 
 clean: 
