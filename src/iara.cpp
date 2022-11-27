@@ -56,18 +56,19 @@ void Iara::setTipo(int tipo){
     this->tipo = tipo;
 }
 
-void Iara::Ataque(Personagem *p, float sorte){
-    //Calcula o golpe baseado no ataque e na vantagem do respectivo adversário;
+int Iara::Ataque(Personagem *p, float sorte){
+   //Calcula o golpe baseado no ataque e na vantagem do respectivo adversário;
     float golpe = this->ataque * sorte; //+ p.vantagem;
     
     int dano = golpe - p->getDefesa();
     std::cout << "Dano: " <<dano <<std::endl;
 
-    if( dano > 0){
     int NovaVida = p->getVida() - dano;
-    p->setVida(NovaVida);
     std::cout<<"Vida do adversario: " << (int)NovaVida<<std::endl<<std::endl;
-    }
+
+    if( dano > 0)
+        return dano;
+    return 0;
 }
 
 void Iara::imprimePersonagem(){

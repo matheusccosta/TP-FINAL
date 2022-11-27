@@ -39,13 +39,13 @@ int main() {
         
         std::cout<<"Turno de "<<p1->getNome()<<", aperte enter somente 1 vez para atacar!"<<std::endl;
         std::cin.ignore();
-        p1->Ataque(p2, Sorte(Sorteio));
+        p2->setVida(p2->getVida() - p1->Ataque(p2, Sorte(Sorteio)));
         
         if(p2->getVida()>0){
 
         std::cout<<"Turno de "<<p2->getNome()<<", aperte enter somente 1 vez para atacar!"<<std::endl;
         std::cin.ignore();
-        p2->Ataque(p1, Sorte(Sorteio));
+        p1->setVida(p1->getVida() - p2->Ataque(p1, Sorte(Sorteio)));
         
         }
     

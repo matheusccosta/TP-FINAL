@@ -1,8 +1,10 @@
 CC := g++
-FLAGS := -I include/ -Wall
+FLAGS := -I third_party -I include/ -Wall
 BUILD := build/
 SRC := src/
+TESTDIR = tests
 TARGET := main.out
+TARGET_TEST := test.out
 
 all: main 
 
@@ -21,8 +23,11 @@ saci:
 jogo: curupira iara mula saci
 	$(CC) $(FLAGS) -c $(SRC)/jogo.cpp -o $(BUILD)/jogo.o
 
-main: curupira iara mula saci jogo
+test: 
+	$(CC) $(FLAGS) $(TESTDIR)/curupira_test.cpp $(BUILD)/curupira.o -o test.out
+
+main: curupira iara mula saci jogo test
 	$(CC) $(FLAGS) $(BUILD)/*.o $(SRC)/main.cpp -o $(TARGET)
 
 clean: 
-	$(RM) -r $(BUILD)/* $(TARGET)
+	$(RM) -r $(BUILD)/*.o $(TARGET) $(TARGET_TEST)

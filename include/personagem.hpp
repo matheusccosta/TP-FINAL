@@ -42,7 +42,7 @@ class Personagem {
 		virtual void imprimePersonagem() = 0;
 
 		//virtual
-		virtual void Ataque(Personagem *p, float sorte) = 0;
+		virtual int Ataque(Personagem *p, float sorte) = 0;
 
 };
 #endif

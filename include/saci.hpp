@@ -27,7 +27,7 @@ class Saci : public Personagem {
 
         void imprimePersonagem() override;
 
-        void Ataque(Personagem *p, float sorte) override;
+        int Ataque(Personagem *p, float sorte) override;
 
 };
 #endif
