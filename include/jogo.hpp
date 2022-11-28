@@ -5,6 +5,13 @@
 #include "mula.hpp"
 #include "iara.hpp"
 #include "curupira.hpp"
+#include <iostream>
+#include <ctime>
+#include <string>
+#include <vector>
+#include <list>
+#include <random>
+
 
 class Jogo {
     protected:
@@ -16,6 +23,8 @@ class Jogo {
     void definePersonagem(Personagem **p, int tipo, std::string NomeJ);
 
     void imprimeMenu();   
+
+    void startGame();
 
     // void controlaTurno(Personagem *p1, Personagem *p2);
 
