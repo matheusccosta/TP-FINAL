@@ -20,7 +20,9 @@ class Jogo {
     int vitorias;
 
     public: 
-    void definePersonagem(Personagem **p, int tipo, std::string NomeJ);
+    void definePersonagem(Personagem **p, std::string tipo, std::string NomeJ);
+
+    void jogarNovamente(std::string proxgame);
 
     void imprimeMenu();   
 
