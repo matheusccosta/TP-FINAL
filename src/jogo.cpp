@@ -79,7 +79,7 @@ void Jogo::startGame(){
 
             try {
                 j.definePersonagem(&p1, tipo, nome1);
-            } catch(std::exception& e) {
+            } catch(TipoInexistente& e) {
                 std::cout << e.what();
             }
         } while(tipo != "1" && tipo != "2" && tipo != "3" && tipo != "4");
@@ -92,7 +92,7 @@ void Jogo::startGame(){
 
             try {
                 j.definePersonagem(&p2, tipo, nome2);
-            } catch(std::exception& e) {
+            } catch(TipoInexistente& e) {
                 std::cout << e.what();
             }
         } while(tipo != "1" && tipo != "2" && tipo != "3" && tipo != "4");
