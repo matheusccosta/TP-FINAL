@@ -24,7 +24,7 @@ jogo: curupira iara mula saci
 	$(CC) $(FLAGS) -c $(SRC)/jogo.cpp -o $(BUILD)/jogo.o
 
 test: 
-	$(CC) $(FLAGS) $(TESTDIR)/*.cpp $(BUILD)/*.o -o test.out
+	$(CC) $(FLAGS) $(TESTDIR)/testGeral.cpp $(BUILD)/*.o -o test.out
 
 main: curupira iara mula saci jogo test
 	$(CC) $(FLAGS) $(BUILD)/*.o $(SRC)/main.cpp -o $(TARGET)
