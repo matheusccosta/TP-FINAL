@@ -1,3 +1,13 @@
+/**
+ * @file jogo.hpp
+ * @author your name (you@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-12-05
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #ifndef JOGO_HPP
 #define JOGO_HPP
 #include "personagem.hpp"
@@ -12,6 +22,10 @@
 #include <list>
 #include <random>
 
+/**
+ * @brief 
+ * 
+ */
 
 class Jogo {
     protected:
@@ -19,17 +33,41 @@ class Jogo {
     int derrotas;
     int vitorias;
 
-    public: 
+    public:
+
+    /**
+     * @brief 
+     * 
+     * @param p 
+     * @param tipo 
+     * @param NomeJ 
+     * @return * void 
+     */
+
     void definePersonagem(Personagem **p, std::string tipo, std::string NomeJ);
-
+    /**
+     * @brief 
+     * 
+     * @param proxgame 
+     */
     void jogarNovamente(std::string proxgame);
-
+    /**
+     * @brief 
+     * 
+     */
     void imprimeMenu();   
-
+    /**
+     * @brief 
+     * 
+     */
     void startGame();
 
     // void controlaTurno(Personagem *p1, Personagem *p2);
-
+    /**
+     * @brief Get the Nome object
+     * 
+     * @return std::string 
+     */
     std::string getNome();
 
 
