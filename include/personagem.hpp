@@ -1,7 +1,7 @@
 /**
  * @file personagem.hpp
- * @author your name (you@domain.com)
- * @brief 
+ * @author Henrique (htofantini@ufmg.br)
+ * @brief Arquivo que contém as assinaturas virtuais da classe Personagem, que é uma interface.
  * @version 0.1
  * @date 2022-12-05
  * 
@@ -19,8 +19,9 @@
 
 
 /**
- * @brief 
- * 
+ * @brief Classe que é a mãe das outras personagens, contendo apenas funções puramente virtuais
+ * @details Sendo apenas funções virtuais, essa classe não precisa ter funções próprias, pois Mula, Iara, Curupira e Saci
+ * são apenas "tipos" de Personagem, não fazendo sentido um Personagem sem ser de um desses tipos descritos.
  */
 class Personagem {
 	protected:
@@ -133,18 +134,18 @@ class Personagem {
  */
 		virtual void setTipo(int tipo) = 0;
 /**
- * @brief 
+ * @brief Imprime os atributos específicos de cada Personagem.
  * 
  */
 		virtual void imprimePersonagem() = 0;
 /**
- * @brief 
+ * @brief Ataque que tem especificidades para cada tipo de Personagem.
  * 
  * @param p 
  * @param sorte 
  * @return int 
  */
-		//virtual
+		
 		virtual int Ataque(Personagem *p, float sorte) = 0;
 
 };
