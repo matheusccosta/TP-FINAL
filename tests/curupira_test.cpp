@@ -7,9 +7,8 @@
 TEST_CASE("TESTANDO ATAQUE"){
 
 std::string NomeJ="test";
-std::vector<int> vantCurupira = {1, 3};
-Personagem *p1 = new Curupira (100, 30, 15, NomeJ, vantCurupira, 4);
-Personagem *p2 = new Curupira (100, 30, 15, NomeJ, vantCurupira, 4);
+Personagem *p1 = new Curupira (NomeJ);
+Personagem *p2 = new Curupira (NomeJ);
 CHECK(p1->Ataque(p2, 0.6) == 18-p2->getDefesa());
 CHECK(p1->Ataque(p2, 0.7) == 21-p2->getDefesa());
 CHECK(p1->Ataque(p2, 0.8) == 24-p2->getDefesa());

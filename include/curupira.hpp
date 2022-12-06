@@ -33,7 +33,7 @@ class Curupira : public Personagem{
  * @param vantagem 
  * @param tipo 
  */
-        Curupira(int pontos_vida, int ataque, int defesa, std::string nome, std::vector <int> vantagem, int tipo);
+        Curupira(std::string nome);
 /**
  * @brief Get the Vida object
  * 

@@ -1,12 +1,12 @@
 #include "mula.hpp"
 
-Mula::Mula(int pontos_vida, int ataque, int defesa, std::string nome, std::vector <int> vantagem, int tipo){
-    this->pontos_vida = pontos_vida;
-    this->ataque = ataque;
-    this->defesa = defesa;
+Mula::Mula(std::string nome){
+    this->pontos_vida = 100;
+    this->ataque = 40;
+    this->defesa = 15;
     this->nome = nome;
-    this->vantagem = vantagem;
-    this->tipo = tipo;
+    vantagem.push_back(4);
+    this->tipo = 2;   
 }
 
 int Mula::getVida(){
@@ -61,14 +61,13 @@ int Mula::Ataque(Personagem *p, float sorte){
     float golpe = this->ataque * sorte; //+ p.vantagem;
     
     int dano = golpe - p->getDefesa();
-    std::cout << "Dano: " <<dano <<std::endl;
-
-    int NovaVida = p->getVida() - dano;
-    std::cout<<"Vida do adversario: " << (int)NovaVida<<std::endl<<std::endl;
+    
+    if (p->getTipo() == 4)
+        dano *=1.2;
 
     if( dano > 0)
-        return dano;
-    return 0;
+            return dano;
+        return 0;
 }
 
 void Mula::imprimePersonagem(){

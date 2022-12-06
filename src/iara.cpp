@@ -1,12 +1,12 @@
 #include "iara.hpp"
 
-Iara::Iara(int pontos_vida, int ataque, int defesa, std::string nome, std::vector <int> vantagem, int tipo){
-    this->pontos_vida = pontos_vida;
-    this->ataque = ataque;
-    this->defesa = defesa;
+Iara::Iara(std::string nome){
+    this->pontos_vida = 115;
+    this->ataque = 30;
+    this->defesa = 15;
     this->nome = nome;
-    this->vantagem = vantagem;
-    this->tipo = tipo;
+    vantagem.push_back(2);
+    this->tipo = 3;
 }
 
 int Iara::getVida(){
@@ -58,17 +58,16 @@ void Iara::setTipo(int tipo){
 
 int Iara::Ataque(Personagem *p, float sorte){
    //Calcula o golpe baseado no ataque e na vantagem do respectivo adversário;
-    float golpe = this->ataque * sorte; //+ p.vantagem;
+   float golpe = this->ataque * sorte; //+ p.vantagem;
     
     int dano = golpe - p->getDefesa();
-    std::cout << "Dano: " <<dano <<std::endl;
 
-    int NovaVida = p->getVida() - dano;
-    std::cout<<"Vida do adversario: " << (int)NovaVida<<std::endl<<std::endl;
+    if (p->getTipo() == 2)
+        dano *=1.75;
 
     if( dano > 0)
-        return dano;
-    return 0;
+            return dano;
+        return 0;
 }
 
 void Iara::imprimePersonagem(){

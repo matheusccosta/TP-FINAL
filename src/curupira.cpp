@@ -1,12 +1,14 @@
 #include "curupira.hpp"
 
-Curupira::Curupira(int pontos_vida, int ataque, int defesa, std::string nome, std::vector <int> vantagem, int tipo){
-    this->pontos_vida = pontos_vida;
-    this->ataque = ataque;
-    this->defesa = defesa;
+Curupira::Curupira(std::string nome){
+    this->pontos_vida = 100;
+    this->ataque = 30;
+    this->defesa = 15;
     this->nome = nome;
-    this->vantagem = vantagem;
-    this->tipo = tipo;    
+    vantagem.push_back(1);
+    vantagem.push_back(3);
+    this->tipo = 4;    
+
 }
 
 int Curupira::getVida(){
@@ -59,12 +61,10 @@ void Curupira::setTipo(int tipo){
 int Curupira::Ataque(Personagem *p, float sorte){
     //Calcula o golpe baseado no ataque e na vantagem do respectivo adversário;
     float golpe = this->ataque * sorte; //+ p.vantagem;
-    
     int dano = golpe - p->getDefesa();
-    std::cout << "Dano: " <<dano <<std::endl;
 
-    int NovaVida = p->getVida() - dano;
-    std::cout<<"Vida do adversario: " << (int)NovaVida<<std::endl<<std::endl;
+    if (p->getTipo() == 3 || p->getTipo() == 1)
+        dano *=1.7;
 
     if( dano > 0)
             return dano;

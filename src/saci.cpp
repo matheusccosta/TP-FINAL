@@ -1,12 +1,12 @@
 #include "saci.hpp"
 
-Saci::Saci(int pontos_vida, int ataque, int defesa, std::string nome, std::vector <int> vantagem, int tipo){
-    this->pontos_vida = pontos_vida;
-    this->ataque = ataque;
-    this->defesa = defesa;
+Saci::Saci(std::string nome){
+    this->pontos_vida = 100;
+    this->ataque = 30;
+    this->defesa = 20;
     this->nome = nome;
-    this->vantagem = vantagem;
-    this->tipo = tipo; 
+    vantagem.push_back(3);
+    this->tipo = 1;   
 }
 
 int Saci::getVida(){
@@ -61,14 +61,13 @@ int Saci::Ataque(Personagem *p, float sorte){
     float golpe = this->ataque * sorte; //+ p.vantagem;
     
     int dano = golpe - p->getDefesa();
-    std::cout << "Dano: " <<dano <<std::endl;
 
-    int NovaVida = p->getVida() - dano;
-    std::cout<<"Vida do adversario: " << (int)NovaVida<<std::endl<<std::endl;
-
+    if (p->getTipo() == 3)
+        dano *=1.5;
+    
     if( dano > 0)
-        return dano;
-    return 0;
+            return dano;
+        return 0;
 }
 
 void Saci::imprimePersonagem(){

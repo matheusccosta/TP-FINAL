@@ -27,14 +27,9 @@ class Mula : public Personagem {
     /**
      * @brief Construct a new Mula object
      * 
-     * @param pontos_vida 
-     * @param ataque 
-     * @param defesa 
      * @param nome 
-     * @param vantagem 
-     * @param tipo 
      */
-        Mula(int pontos_vida, int ataque, int defesa, std::string nome, std::vector <int> vantagem, int tipo);
+        Mula(std::string nome);
 
     /**
      * @brief Get the Vida object

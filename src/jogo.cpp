@@ -5,30 +5,26 @@
 
 void Jogo::definePersonagem(Personagem **p, std::string tipo, std::string nomeJ){
    
-    std::vector<int> vantSaci = {3, 0};  // Terra ganha da agua
-    std::vector<int> vantMula = {4, 0};  // Fogo ganha da planta
-    std::vector<int> vantIara = {2, 0};  // Agua ganha do fogo
-    std::vector<int> vantCurupira = {1, 3};  // Planta ganha da terra e da agua
  
     if(tipo == "1") {
         NomeJ = "Saci de " + nomeJ;
         //std::cout<<NomeJ;
-        *p = new Saci (100, 30, 15, NomeJ, vantSaci, 1);
+        *p = new Saci (NomeJ);
     }
     else if(tipo == "2") {
         NomeJ = "Mula de " + nomeJ;
         //std::cout<<NomeJ;
-        *p = new Mula (100, 30, 15, NomeJ, vantMula, 2);
+        *p = new Mula (NomeJ);
     }
     else if(tipo == "3") {
         NomeJ = "Iara de " + nomeJ;
         //std::cout<<NomeJ;
-        *p = new Iara (100, 30, 15, NomeJ, vantIara, 3);
+        *p = new Iara (NomeJ);
     }
     else if(tipo == "4") {
         NomeJ = "Curupira de " + nomeJ;
         //std::cout<<NomeJ;
-        *p = new Curupira (100, 30, 15, NomeJ, vantCurupira, 4);
+        *p = new Curupira (NomeJ);
         //int pontos_vida, int ataque, int defesa, std::string nome, std::vector <int> vantagem, int tipo
     }
     else {
@@ -48,7 +44,7 @@ void Jogo::imprimeMenu(){
     std::cout<<std::endl<<"Qual voce escolhe? Insira: ";
 }
 
-
+int aux;
 int jogando = 1;
 int partida = 1;
 std::string proxgame;
@@ -107,14 +103,18 @@ void Jogo::startGame(){
         
             std::cout<<"Turno de "<<p1->getNome()<<", aperte enter somente 1 vez para atacar!"<<std::endl;
             std::cin.ignore();
-            p2->setVida(p2->getVida() - p1->Ataque(p2, Sorte(Sorteio)));
-            
+            aux = p1->Ataque(p2, Sorte(Sorteio));
+            p2->setVida(p2->getVida() - aux);
+            std::cout<<"Vida de "<< p2->getNome()<< ": " << p2->getVida() << std::endl;
+            std::cout<<"Dano do golpe: " << aux << std::endl;
             if(p2->getVida()>0){
 
-            std::cout<<"Turno de "<<p2->getNome()<<", aperte enter somente 1 vez para atacar!"<<std::endl;
-            std::cin.ignore();
-            p1->setVida(p1->getVida() - p2->Ataque(p1, Sorte(Sorteio)));
-            
+                std::cout<<"Turno de "<<p2->getNome() <<", aperte enter somente 1 vez para atacar!"<<std::endl;
+                std::cin.ignore();
+                aux = p2->Ataque(p1, Sorte(Sorteio));
+                p1->setVida(p1->getVida() - aux);
+                std::cout<<"Vida de " << p1->getNome()<< ": " << p1->getVida() << std::endl;
+                std::cout<<"Dano do golpe: " << aux << std::endl << std::endl;
             } 
         }
 
@@ -144,6 +144,7 @@ void Jogo::startGame(){
             }
         } while(proxgame != "S" && proxgame != "s" && proxgame != "N" && proxgame != "n");
     }
+    std::cin.ignore();
 }
 
 void Jogo::jogarNovamente(std::string proxgame) {

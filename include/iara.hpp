@@ -29,7 +29,7 @@ class Iara : public Personagem {
      * 
      * @param nome
      */
-        Iara(int pontos_vida, int ataque, int defesa, std::string nome, std::vector <int> vantagem, int tipo);
+        Iara(std::string nome);
 
     /**
      * @brief Get the Vida object
