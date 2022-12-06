@@ -1,5 +1,6 @@
 #include "curupira.hpp"
 
+//Construtor seta os valores especificos do curupira e recebe o nome do Jogador
 Curupira::Curupira(std::string nome){
     this->pontos_vida = 100;
     this->ataque = 30;
@@ -11,6 +12,7 @@ Curupira::Curupira(std::string nome){
 
 }
 
+//Funções gets e sets:
 int Curupira::getVida(){
     return this->pontos_vida;
 }
@@ -58,9 +60,12 @@ void Curupira::setTipo(int tipo){
     this->tipo = tipo;
 }
 
+
+//Realiza o ataque do personagem que chama essa essa função em cima do personagem p;
 int Curupira::Ataque(Personagem *p, float sorte){
     //Calcula o golpe baseado no ataque e na vantagem do respectivo adversário;
-    float golpe = this->ataque * sorte; //+ p.vantagem;
+    float golpe = this->ataque * sorte; 
+    //A sorte é obtida aleatoriamente.
     int dano = golpe - p->getDefesa();
 
     if (p->getTipo() == 3 || p->getTipo() == 1)
@@ -72,6 +77,7 @@ int Curupira::Ataque(Personagem *p, float sorte){
    
 }
 
+//Imprime todos os atributos do personagem.
 void Curupira::imprimePersonagem(){
     std::cout << "Nome: " << nome << std::endl << "Ataque: " << ataque << std::endl;
     std::cout << "Defesa: " << defesa << std::endl << "Vida: " << pontos_vida << std::endl;

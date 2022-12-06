@@ -1,5 +1,6 @@
 #include "mula.hpp"
 
+//Construtor seta os valores especificos do mula e recebe o nome do Jogador
 Mula::Mula(std::string nome){
     this->pontos_vida = 100;
     this->ataque = 40;
@@ -9,6 +10,7 @@ Mula::Mula(std::string nome){
     this->tipo = 2;   
 }
 
+//Funções gets e sets:
 int Mula::getVida(){
     return this->pontos_vida;
 }
@@ -70,6 +72,7 @@ int Mula::Ataque(Personagem *p, float sorte){
         return 0;
 }
 
+//Imprime todos os atributos do personagem.
 void Mula::imprimePersonagem(){
     std::cout << "Nome: " << nome << std::endl << "Ataque: " << ataque << std::endl;
     std::cout << "Defesa: " << defesa << std::endl << "Vida: " << pontos_vida << std::endl;

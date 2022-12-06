@@ -1,5 +1,6 @@
 #include "saci.hpp"
 
+//Construtor seta os valores especificos do saci e recebe o nome do Jogador
 Saci::Saci(std::string nome){
     this->pontos_vida = 100;
     this->ataque = 30;
@@ -9,6 +10,7 @@ Saci::Saci(std::string nome){
     this->tipo = 1;   
 }
 
+//Funções gets e sets:
 int Saci::getVida(){
     return this->pontos_vida;
 }
@@ -58,7 +60,7 @@ void Saci::setTipo(int tipo){
 
 int Saci::Ataque(Personagem *p, float sorte){
     //Calcula o golpe baseado no ataque e na vantagem do respectivo adversário;
-    float golpe = this->ataque * sorte; //+ p.vantagem;
+    float golpe = this->ataque * sorte; 
     
     int dano = golpe - p->getDefesa();
 
@@ -70,6 +72,7 @@ int Saci::Ataque(Personagem *p, float sorte){
         return 0;
 }
 
+//Imprime todos os atributos do personagem.
 void Saci::imprimePersonagem(){
     std::cout << "Nome: " << nome << std::endl << "Ataque: " << ataque << std::endl;
     std::cout << "Defesa: " << defesa << std::endl << "Vida: " << pontos_vida << std::endl;

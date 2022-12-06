@@ -1,5 +1,6 @@
 #include "iara.hpp"
 
+//Construtor seta os valores especificos do iara e recebe o nome do Jogador
 Iara::Iara(std::string nome){
     this->pontos_vida = 115;
     this->ataque = 30;
@@ -9,6 +10,7 @@ Iara::Iara(std::string nome){
     this->tipo = 3;
 }
 
+//Funções gets e sets:
 int Iara::getVida(){
     return this->pontos_vida;
 }
@@ -56,9 +58,10 @@ void Iara::setTipo(int tipo){
     this->tipo = tipo;
 }
 
+//Realiza o ataque do personagem que chama essa essa função em cima do personagem p;
 int Iara::Ataque(Personagem *p, float sorte){
    //Calcula o golpe baseado no ataque e na vantagem do respectivo adversário;
-   float golpe = this->ataque * sorte; //+ p.vantagem;
+   float golpe = this->ataque * sorte;
     
     int dano = golpe - p->getDefesa();
 
@@ -70,6 +73,7 @@ int Iara::Ataque(Personagem *p, float sorte){
         return 0;
 }
 
+//Imprime todos os atributos do personagem.
 void Iara::imprimePersonagem(){
     std::cout << "Nome: " << nome << std::endl << "Ataque: " << ataque << std::endl;
     std::cout << "Defesa: " << defesa << std::endl << "Vida: " << pontos_vida << std::endl;

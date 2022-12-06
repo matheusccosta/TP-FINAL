@@ -3,7 +3,7 @@
 #include "curupira.hpp"
 #include "personagem.hpp"
 
-
+//testa o funcionamento correto da função Ataque
 TEST_CASE("TESTANDO ATAQUE"){
 
 std::string NomeJ="test";
