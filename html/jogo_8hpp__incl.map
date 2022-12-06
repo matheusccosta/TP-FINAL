@@ -1,0 +1,14 @@
+<map id="include/jogo.hpp" name="include/jogo.hpp">
+<area shape="rect" id="node1" title="Arquivo responsável pela entrada, processamento e execução dos dados inseridos pelo jogador,..." alt="" coords="334,5,463,32"/>
+<area shape="rect" id="node2" href="$personagem_8hpp.html" title=" " alt="" coords="333,155,464,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,229,85,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="211,229,269,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="344,229,403,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="455,229,518,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="600,229,643,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="696,229,768,256"/>
+<area shape="rect" id="node9" href="$saci_8hpp.html" title="Arquivo que contém as assinaturas da classe Curupira." alt="" coords="437,80,513,107"/>
+<area shape="rect" id="node10" href="$mula_8hpp.html" title="Arquivo que contém as assinaturas da classe Mula." alt="" coords="537,80,620,107"/>
+<area shape="rect" id="node11" href="$iara_8hpp.html" title="Arquivo que contém as assinaturas da classe Iara." alt="" coords="159,80,233,107"/>
+<area shape="rect" id="node12" href="$curupira_8hpp.html" title="Arquivo que contém as assinaturas da classe Curupira." alt="" coords="258,80,361,107"/>
+</map>

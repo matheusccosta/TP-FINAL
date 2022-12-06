@@ -1,7 +1,8 @@
 /**
  * @file jogo.hpp
- * @author your name (you@domain.com)
- * @brief 
+ * @author Gustavo Luís (gustavolmf@ufmg.br)
+ * @brief Arquivo responsável pela entrada, processamento e execução dos dados inseridos pelo jogador,
+ * além de gerar a interface do jogo no cmd.
  * @version 0.1
  * @date 2022-12-05
  * 
@@ -29,8 +30,20 @@
 
 class Jogo {
     protected:
+    /**
+     * @brief 
+     * 
+     */
     std::string NomeJ;
+    /**
+     * @brief 
+     * 
+     */
     int derrotas;
+    /**
+     * @brief 
+     * 
+     */
     int vitorias;
 
     public:

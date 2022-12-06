@@ -5,7 +5,7 @@
 
 void Jogo::definePersonagem(Personagem **p, std::string tipo, std::string nomeJ){
    
-    std::vector<int> vantSaci = {3, 0};
+    std::vector<int> vantSaci = {3, 0};  // Terra ganha da agua
     std::vector<int> vantMula = {4, 0};  // Fogo ganha da planta
     std::vector<int> vantIara = {2, 0};  // Agua ganha do fogo
     std::vector<int> vantCurupira = {1, 3};  // Planta ganha da terra e da agua

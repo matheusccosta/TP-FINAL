@@ -24,12 +24,35 @@
  */
 class Personagem {
 	protected:
-			
-			int pontos_vida;
+            /**
+             * @brief variável que armazena a vida do Personagem 
+             * 
+             */
+			int pontos_vida; 
+			/**
+			 * @brief variável que armazena o ataque do Personagem
+			 * 
+			 */
 			int ataque;
+			/**
+			 * @brief variável que armazena a defesa do Personagem
+			 * 
+			 */
 			int defesa;
+			/**
+			 * @brief variável que armazena o nome do Personagem
+			 * 
+			 */
 			std::string nome;
+			/**
+			 * @brief variável que vai armazenar a vantagem para cada tipo de confronto entre os Personagens
+			 * 
+			 */
 			std::vector<int> vantagem;
+			/**
+			 * @brief variável que armazena o ataque do Personagem
+			 * 
+			 */
 			int tipo;
 			
 	public: 

@@ -1,7 +1,7 @@
 /**
  * @file saci.hpp
- * @author your name (you@domain.com)
- * @brief 
+ * @author Matheus Castro (matheuscastrocosta@ufmg.br)
+ * @brief Arquivo que contém as assinaturas da classe Curupira.
  * @version 0.1
  * @date 2022-12-05
  * 
@@ -14,7 +14,11 @@
 #include "personagem.hpp"
 
 /**
- * @brief 
+ * @brief Classe que comanda a criação e ações do personagem Saci 
+ * @details Implementa o Personagem Saci com seus atributos e métodos responsáveis por obter 
+ * e atribuir suas características. Como cada Personagem possui seus próprios valores, os métodos
+ * são do tipo sobrescrita. Além disso, possui uma função que vai imprimir na tela o Personagem
+ * com seus atributos específicos quando chamada e uma função para declarar ataque a outro Personagem.
  * 
  */
 
@@ -106,12 +110,16 @@ class Saci : public Personagem {
  */
         void setTipo(int tipo) override;
 /**
- * @brief 
- * 
+ * @brief Imprime informações específicas do Personagem Saci
+ * @details Imprime o nome do Personagem para o jogador que escolheu o Saci,
+ * mostra sua vantagem contra o Personagem Iara, além de mostrar os atributos 
+ * ataque, defesa, pontos_vida e tipo.
  */
         void imprimePersonagem() override;
 /**
- * @brief 
+ * @brief Controla o ataque específico do Saci
+ * @details Verifica se o Ataque é contra a Iara e, se sim, gera um ataque crítico.
+ * Caso o Ataque seja contra outro Personagem, permanece com um valor base 60~100% do ataque base. 
  * 
  * @param p 
  * @param sorte 

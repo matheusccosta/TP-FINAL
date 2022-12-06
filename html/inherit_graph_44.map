@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classPersonagem.html" title=" " alt="" coords="5,81,108,108"/>
+<area shape="rect" id="node2" href="$classCurupira.html" title="Classe que comanda a criação e ações do personagem Curupira." alt="" coords="156,5,233,32"/>
+<area shape="rect" id="node3" href="$classIara.html" title="Classe que comanda a criação e ações do personagem Iara." alt="" coords="171,56,218,83"/>
+<area shape="rect" id="node4" href="$classMula.html" title="Classe que comanda a criação e ações do personagem Mula." alt="" coords="167,107,222,133"/>
+<area shape="rect" id="node5" href="$classSaci.html" title="Classe que comanda a criação e ações do personagem Saci." alt="" coords="170,157,219,184"/>
+</map>

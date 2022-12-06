@@ -1,0 +1,7 @@
+<map id="Personagem" name="Personagem">
+<area shape="rect" id="node1" title=" " alt="" coords="315,5,497,347"/>
+<area shape="rect" id="node2" href="$classCurupira.html" title="Classe que comanda a criação e ações do personagem Curupira." alt="" coords="5,395,188,677"/>
+<area shape="rect" id="node3" href="$classIara.html" title="Classe que comanda a criação e ações do personagem Iara." alt="" coords="212,395,395,677"/>
+<area shape="rect" id="node4" href="$classMula.html" title="Classe que comanda a criação e ações do personagem Mula." alt="" coords="419,395,601,677"/>
+<area shape="rect" id="node5" href="$classSaci.html" title="Classe que comanda a criação e ações do personagem Saci." alt="" coords="625,395,808,677"/>
+</map>

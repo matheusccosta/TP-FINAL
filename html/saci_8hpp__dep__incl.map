@@ -1,0 +1,7 @@
+<map id="include/saci.hpp" name="include/saci.hpp">
+<area shape="rect" id="node1" title="Arquivo que contém as assinaturas da classe Curupira." alt="" coords="119,5,245,32"/>
+<area shape="rect" id="node2" href="$jogo_8hpp.html" title="Arquivo responsável pela entrada, processamento e execução dos dados inseridos pelo jogador,..." alt="" coords="15,80,144,107"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="129,155,235,181"/>
+<area shape="rect" id="node5" href="$saci_8cpp.html" title=" " alt="" coords="219,80,318,107"/>
+<area shape="rect" id="node3" href="$jogo_8cpp.html" title=" " alt="" coords="5,155,105,181"/>
+</map>
