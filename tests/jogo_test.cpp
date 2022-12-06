@@ -26,21 +26,24 @@ SUBCASE("FUNÇÃO JOGAR NOVAMENTE"){
         }
     
     }
-}
-SUBCASE("FUNÇÃO DEFINE PERSONAGEM"){
 
-    SUBCASE("ENTRADA INVÁLIDA"){
 
-        CHECK_THROWS(j.definePersonagem(&p1,"5","teste"));
-        CHECK_THROWS(j.definePersonagem(&p2,"-2","teste"));
-        CHECK_THROWS(j.definePersonagem(&p3,"z","teste"));
 
-    }
-    SUBCASE("ENTRADA VÁLIDA"){
+    SUBCASE("FUNÇÃO DEFINE PERSONAGEM"){
 
-        CHECK_THROWS(j.definePersonagem(&p4, "2", "gustavo"));
+        SUBCASE("ENTRADA INVÁLIDA"){
+
+            CHECK_THROWS(j.definePersonagem(&p1,"5","teste"));
+            CHECK_THROWS(j.definePersonagem(&p2,"-2","teste"));
+            CHECK_THROWS(j.definePersonagem(&p3,"z","teste"));
 
         }
-    
-    }
+        SUBCASE("ENTRADA VÁLIDA"){
 
+            CHECK_THROWS(j.definePersonagem(&p4, "2", "gustavo"));
+
+            }
+        
+        }
+
+}
