@@ -5,3 +5,4 @@
 #include "curupira_test.cpp"
 #include "saci_test.cpp"
 #include "mula_test.cpp"
+#include "jogo_test.cpp"

@@ -120,7 +120,7 @@ void Jogo::startGame(){
             aux = p1->Ataque(p2, Sorte(Sorteio));
             p2->setVida(p2->getVida() - aux);
             std::cout<<"Vida de "<< p2->getNome()<< ": " << p2->getVida() << std::endl;
-            std::cout<<"Dano do golpe: " << aux << std::endl;
+            std::cout<<"Dano do golpe: " << aux << std::endl << std::endl;
 
             //Confere se o jogador que acabou de receber o ataque continua vivo para realizar o seu turno.
             if(p2->getVida()>0){
