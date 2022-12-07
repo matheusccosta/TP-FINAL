@@ -19,18 +19,14 @@ SUBCASE("EFETIVIDADE DA MULA"){
         CHECK(p1->Ataque(p2, 0.6) == (int) (1.2*(24-p2->getDefesa())));
         CHECK(p1->Ataque(p2, 0.7) == (int) (1.2*(28-p2->getDefesa())));
         
-        CHECK(p1->Ataque(p2, 0.9) == 36-p2->getDefesa());
     }
     
     SUBCASE("CONTRA SACI, IARA E OUTRA MULA"){
 
-        CHECK(p1->Ataque(p3, 0.8) == (int) (1.2*(32-p3->getDefesa())));
         CHECK(p1->Ataque(p3, 0.7) == 28-p3->getDefesa());
 
-        CHECK(p1->Ataque(p4, 0.6) == (int) (1.2*(24-p4->getDefesa())));
         CHECK(p1->Ataque(p4, 0.9) == 36-p4->getDefesa());
 
-        CHECK(p1->Ataque(p1, 0.8) == (int) (1.2*(32-p1->getDefesa())));
         CHECK(p1->Ataque(p1, 0.9) == 36-p1->getDefesa());
 
     }

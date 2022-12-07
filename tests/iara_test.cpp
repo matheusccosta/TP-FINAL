@@ -21,22 +21,15 @@ SUBCASE("EFETIVIDADE DA IARA"){
         CHECK(p1->Ataque(p4, 0.6) == (int) (1.7*(18-p4->getDefesa())));
         CHECK(p1->Ataque(p4, 0.7) == (int) (1.7*(21-p4->getDefesa())));
         
-        CHECK(p1->Ataque(p4, 0.9) == 27-p4->getDefesa());
         }
     
     SUBCASE("CONTRA SACI, CURUPIRA OU OUTRA IARA"){
-
-        CHECK(p1->Ataque(p1, 0.8) == (int) (1.7*(24-p1->getDefesa())));
-
-        CHECK(p1->Ataque(p2, 0.7) == (int) (1.7*(21-p2->getDefesa())));
-
-        CHECK(p1->Ataque(p3, 0.9) == (int) (1.7*(21-p3->getDefesa())));
         
         CHECK(p1->Ataque(p1, 0.8) == 24-p1->getDefesa());
 
         CHECK(p1->Ataque(p2, 0.9) == 27-p1->getDefesa());
 
-        CHECK(p1->Ataque(p1, 0.6) == 18-p1->getDefesa());
+        CHECK(p1->Ataque(p3, 0.7) == 21-p3->getDefesa());
         }
 
     }

@@ -24,14 +24,11 @@ SUBCASE("EFETIVIDADE DO CURUPIRA"){
         CHECK(p1->Ataque(p3, 0.8) == (int) (1.7*(24-p3->getDefesa())));
         CHECK(p1->Ataque(p3, 0.9) == (int) (1.7*(27-p3->getDefesa())));
         
-        CHECK(p1->Ataque(p3, 0.9) == 27-p3->getDefesa());
         }
     
     SUBCASE("CONTRA MULA E OUTRO CURUPIRA"){
 
-        CHECK(p1->Ataque(p4, 0.8) == (int) (1.7*(24-p4->getDefesa())));
-
-        CHECK(p1->Ataque(p1, 0.7) == (int) (1.7*(21-p1->getDefesa())));
+        CHECK(p1->Ataque(p4, 0.8) == 24-p4->getDefesa());
 
         CHECK(p1->Ataque(p1, 0.7) == 21-p1->getDefesa());
 

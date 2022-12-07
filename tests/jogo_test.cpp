@@ -11,21 +11,21 @@ Personagem *p2;
 Personagem *p3;
 Personagem *p4;
 
-SUBCASE("FUNÇÃO JOGAR NOVAMENTE"){
+    SUBCASE("FUNÇÃO JOGAR NOVAMENTE"){
 
-    SUBCASE("ENTRADA INVÁLIDA"){
-
-        CHECK_THROWS(j.jogarNovamente("fksjd"));
-    }
-    SUBCASE("ENTRADA VÁLIDA"){
-
-        CHECK_THROWS(j.jogarNovamente("S"));
-        CHECK_THROWS(j.jogarNovamente("s"));
-        CHECK_THROWS(j.jogarNovamente("N"));
-        CHECK_THROWS(j.jogarNovamente("n"));
+        SUBCASE("ENTRADA INVÁLIDA"){
+        
+            CHECK_THROWS(j.jogarNovamente("fksjd"));
         }
-    
-    }
+        SUBCASE("ENTRADA VÁLIDA"){
+
+            CHECK_NOTHROW(j.jogarNovamente("S"));
+            CHECK_NOTHROW(j.jogarNovamente("s"));
+            CHECK_NOTHROW(j.jogarNovamente("N"));
+            CHECK_NOTHROW(j.jogarNovamente("n"));
+            }
+        
+        }
 
 
 
@@ -40,10 +40,10 @@ SUBCASE("FUNÇÃO JOGAR NOVAMENTE"){
         }
         SUBCASE("ENTRADA VÁLIDA"){
 
-            CHECK_THROWS(j.definePersonagem(&p4, "2", "gustavo"));
+            CHECK_NOTHROW(j.definePersonagem(&p4, "2", "gustavo"));
 
-            }
-        
         }
+        
+    }
 
 }
