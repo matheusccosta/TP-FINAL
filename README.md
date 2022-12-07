@@ -23,8 +23,21 @@ Cada rodada so pode ter um vencedor e chega ao fim quando a vida de um dos dois 
 
 ## Documentação
 
-[Documentação]()
+*A documentação deste projeto foi feita utilizando doxygen.*
 
+Passo a passo para abrir:
+
+```bash
+- Clone o projeto em uma pasta (https://github.com/Matheus-CastroCosta/TP-FINAL)
+
+- Nesta pasta, abra a pasta "html"
+
+- Dentro dela, va no espaco de pesquisa da pasta
+
+- Procure por index
+
+- Basta clicar no icone do index e abrir em seu navegador de preferencia.
+```
 
 ## Rodando localmente
 
