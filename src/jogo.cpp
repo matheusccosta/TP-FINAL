@@ -119,6 +119,8 @@ void Jogo::startGame(){
             std::cin.ignore();
             aux = p1->Ataque(p2, Sorte(Sorteio));
             p2->setVida(p2->getVida() - aux);
+            if(p2->getVida() < 0)
+                p2->setVida(0);
             std::cout<<"Vida de "<< p2->getNome()<< ": " << p2->getVida() << std::endl;
             std::cout<<"Dano do golpe: " << aux << std::endl << std::endl;
 
@@ -129,6 +131,8 @@ void Jogo::startGame(){
                 std::cin.ignore();
                 aux = p2->Ataque(p1, Sorte(Sorteio));
                 p1->setVida(p1->getVida() - aux);
+                if(p1->getVida() < 0)
+                    p1->setVida(0);
                 std::cout<<"Vida de " << p1->getNome()<< ": " << p1->getVida() << std::endl;
                 std::cout<<"Dano do golpe: " << aux << std::endl << std::endl;
             } 
